@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.22 32.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fabd13;
+      }
+
+      .cls-2 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <title>favicon</title>
+  <g>
+    <path class="cls-1" d="M49.68,24.94A14,14,0,0,0,28.57,12.8V8.35a1.87,1.87,0,0,0-1.86-1.87h-3.3a1.87,1.87,0,0,0-1.87,1.87v4.44a14,14,0,1,0,7,12.52h0v-.37h0a7,7,0,0,1,14,0ZM14.52,32a7,7,0,1,1,7-7A7,7,0,0,1,14.52,32Z" transform="translate(-0.46 -6.48)"/>
+    <path class="cls-1" d="M42.65,25V37.13A1.87,1.87,0,0,0,44.52,39h3.29a1.87,1.87,0,0,0,1.87-1.87V24.94h-7A0,0,0,0,0,42.65,25Z" transform="translate(-0.46 -6.48)"/>
+    <circle class="cls-2" cx="35.24" cy="18.35" r="3.7"/>
+  </g>
+</svg>
