@@ -29,8 +29,8 @@ import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
 import Gallery from "@/components/gallery";
 // import WhyUs from "@/components/WhyUs";
-import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
+// import Team from "@/components/Team";
+// import Testimonials from "@/components/Testimonials";
 
 const theme = createTheme({
   palette: {
@@ -68,11 +68,11 @@ export default function Home() {
         <Gallery />
       </div>
       {/* <WhyUs /> */}
-      <Team />
-      <Testimonials />
-      <div id="Contact">
+      {/* <Team />
+      <Testimonials /> */}
+      {/* <div id="Contact">
         <CallToAction></CallToAction>
-      </div>
+      </div> */}
       <div>
         <BoxHolder></BoxHolder>
       </div>
