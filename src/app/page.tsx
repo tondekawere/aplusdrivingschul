@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import HeroCenter from "@/components/hero";
-import FeaturesSmallColumn from "@/components/feature";
 import Footer from "@/components/footer";
 import About from "@/components/about";
 import BoxHolder from "@/components/box";
@@ -29,6 +28,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
+import Gallery from "@/components/gallery";
 
 const theme = createTheme({
   palette: {
@@ -55,20 +55,20 @@ export default function Home() {
       </div>
 
       <div id="About">
-        <About/>
+        <About />
       </div>
 
-      <div>
-        <Services/>
+      <div id="Services">
+        <Services />
       </div>
 
-      <div id="Contact">
-        <FeaturesSmallColumn />
+      <div id="Gallery">
+        <Gallery />
       </div>
       <div>
         <CallToAction></CallToAction>
       </div>
-          <div id="Services">
+      <div id="Services">
         <BoxHolder></BoxHolder>
       </div>
       <div>
