@@ -5,9 +5,6 @@ import FeaturesSmallColumn from "@/components/feature";
 import Footer from "@/components/footer";
 import About from "@/components/about";
 import BoxHolder from "@/components/box";
-import LeftSection from "@/components/leftSection";
-import RightSection from "@/components/rightSection";
-import ShowCase from "@/components/showCase";
 import { responsiveFontSizes } from '@mui/material/styles';
 
 
@@ -31,8 +28,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import CallToAction from "@/components/callToAction";
-import SectionNoAction from "@/components/sectionNoAction";
-import Ribbon from "@/components/ribbon";
+import Services from "@/components/services";
 
 const theme = createTheme({
   palette: {
@@ -63,10 +59,7 @@ export default function Home() {
       </div>
 
       <div>
-        <Ribbon
-          title="Discover our suite of business About"
-          subtitle="By partnering with us you are assured of a tailored digital and clouds About.  The technology fades to the background with a focus on your business drivers and user experiences."
-        />
+        <Services/>
       </div>
 
       <div id="Contact">
@@ -75,7 +68,7 @@ export default function Home() {
       <div>
         <CallToAction></CallToAction>
       </div>
-          <div id="Partners">
+          <div id="Services">
         <BoxHolder></BoxHolder>
       </div>
       <div>
@@ -98,7 +91,7 @@ const CustomNavBarLandingPage = () => {
 
     {
       id: 4,
-      title: "Partners",
+      title: "Services",
     },
     {
       id: 5,

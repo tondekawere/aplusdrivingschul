@@ -30,17 +30,18 @@ export default function CustomizedDialogs() {
       <Button
         variant="contained"
         size="large"
-        color="primary"
+        color="error"
         sx={{
-          padding: "10",
+          mt: 2,
+          width: { xs: "100%", sm: "max-content" },
           ":hover": {
             backgroundColor: "#fff",
-            color: "#fcba03",
+            color: "red",
           },
         }}
         onClick={handleClickOpen}
       >
-        Contact
+        Contact Us
       </Button>
       <BootstrapDialog aria-labelledby="customized-dialog-title" open={open}>
         <IconButton
