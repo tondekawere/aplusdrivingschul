@@ -8,7 +8,7 @@ const Book = () => {
       container
       spacing={6}
       sx={{
-        background: "url(../images/serv.png)",
+        background: "url(../Images/serv.png)",
         backgroundPosition: "center center",
         backgroundSize: "cover",
         display: "flex",
@@ -43,6 +43,7 @@ const Book = () => {
             color="error"
             sx={{
               mt: 2,
+              mr:3,
               ":hover": {
                 backgroundColor: "#fff",
                 color: "red",
