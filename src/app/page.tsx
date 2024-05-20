@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import HeroCenter from "@/components/hero";
 import FeaturesSmallColumn from "@/components/feature";
 import Footer from "@/components/footer";
-import About from "@/components/About";
+import About from "@/components/about";
 import BoxHolder from "@/components/box";
 import LeftSection from "@/components/leftSection";
 import RightSection from "@/components/rightSection";
