@@ -1,188 +1,105 @@
-import React, { useState } from "react";
-import {
-  TextField,
-  Typography,
-  Paper,
-  Button,
-  Select,
-  Box,
-  Divider,
-  Stack,
-  Grid,
-  Card,
-} from "@mui/material";
-import { ApprovalSharp, TaskAlt } from "@mui/icons-material";
-import Image from "next/image";
+import React from "react";
+import { Grid, Typography, TextField, Button } from "@mui/material";
+// import Map from "./Map";
+import { useTheme } from "@mui/material/styles";
 
-export default function CallToAction() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [cell, setCell] = useState("");
-
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: any) => {
-    setLoading(true);
-    e.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_EMAIL_USERNAME);
-    console.log(process.env.NEXT_PUBLIC_EMAIL_PASSWORD);
-
-    if (name == "" && email == "") {
-      setLoading(false);
-      alert("Please enter both name & email id");
-      return false;
-    }
-
-    await fetch("/api/", {
-      method: "POST",
-      body: JSON.stringify({ name, email, cell, message }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data) {
-          alert(
-            `Thank you for your interest ${name}! We will get back to you soon!`
-          );
-          setName("");
-          setEmail("");
-          setCell("");
-          setMessage("");
-        } else {
-          alert("Apologies! Please try again.");
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-        alert("Ooops! unfortunately some error has occurred.");
-      });
-    return true;
-  };
+const CallToAction = () => {
+  const theme = useTheme();
   return (
-    <div>
-      <Box sx={{ width: "100%", mb: 2 }}>
-        <Divider>
-          <Typography variant="h4">Contact</Typography>
-        </Divider>
-      </Box>
-      <Grid
-        container
-        display={"flex"}
-        spacing={2}
-        sx={{ gap: { lg: "5%" }, padding: { lg: "1% 5% 4% 5% " } }}
-      >
-        <Grid
-          item
-          sm={12}
-          md={8}
-          lg={6}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          border={0}
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        padding: { xs: theme.spacing(4), lg: theme.spacing(10) },
+        display: { sm: "flex" },
+        justifyContent: { sm: "space-between" },
+        // gap: { sm: "10%" },
+      }}
+    >
+      <Grid item xs={12} sm={6} md={6} lg={5} xl={5}>
+        <Typography gutterBottom variant="h4" fontWeight={800}>
+          Contact Us
+        </Typography>
+        <Typography
+          gutterBottom
+          component="p"
+          variant="body2"
+          color="textSecondary"
         >
-          <Stack gap={5} sx={{ p: 0 }}>
-            <Box display={"flex"}>
-              <TaskAlt sx={{ mr: 2 }} />
-              <Typography variant="h6">
-                Are you currently facing challenges with your voice solutions?
-              </Typography>
-            </Box>
-            <Box display={"flex"}>
-              <TaskAlt sx={{ mr: 2 }} />
-              <Typography variant="h6">
-                Is your service provider leaving you unattended for days?
-              </Typography>
-            </Box>
-            <Box display={"flex"}>
-              <TaskAlt sx={{ mr: 2 }} />
-              <Typography variant="h6">
-                Are you always have issues with your company emails?
-              </Typography>
-            </Box>
-          </Stack>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          md={4}
-          lg={5}
-          border={0}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <Card>
-            <form onSubmit={handleSubmit}>
-              <Box
-                sx={{
-                  border: 0,
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  p: 2,
-                }}
-                gap={2}
-              >
-                <TextField
-                  label="name"
-                  size="small"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  fullWidth
-                ></TextField>
-
-                <TextField
-                  label="cell"
-                  size="small"
-                  type="text"
-                  value={cell}
-                  onChange={(e) => setCell(e.target.value)}
-                  fullWidth
-                ></TextField>
-
-                <TextField
-                  label="email"
-                  size="small"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                ></TextField>
-
-                <TextField
-                  label="Message"
-                  size="small"
-                  type="text"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  multiline
-                  rows={5} 
-                  // sx={{ resize: "none", overflowY: "auto" }} 
-                />
-                <Box sx={{ border: 0 }}>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      mb: 1,
-                      borderRadius: 1,
-                      ":hover": {
-                        backgroundColor: "#fff",
-                        color: "#fcba03",
-                      },
-                    }}
-                    type="submit"
-                  >
-                    {" "}
-                    CONNECT
-                  </Button>
-                </Box>
-              </Box>
-            </form>
-          </Card>
-        </Grid>
+          Send us a message and we will get back to you as soon as we can
+        </Typography>
+        <form>
+          <TextField
+            label="Full Name"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+          />
+          <TextField
+            label="Email Address"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+          />
+          <TextField
+            label="Type your message"
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            multiline
+            rows={4}
+          />
+          <div
+            style={{
+              justifyContent: "flex-start",
+              display: "flex",
+              width: "100%",
+            }}
+          >
+            <Button
+              variant="contained"
+              size="large"
+              color="error"
+              sx={{
+                mt: 2,
+                width: { md: "max-content" },
+                ":hover": {
+                  backgroundColor: "#fff",
+                  color: "red",
+                },
+              }}
+            >
+              SEND
+            </Button>
+          </div>
+        </form>
       </Grid>
-    </div>
+      <Grid
+        item
+        xs={12}
+        sm={5}
+        md={6}
+        lg={6}
+        xl={6}
+        sx={{
+          height: { xs: "30vh", sm: "unset" },
+        }}
+      >
+        <iframe
+          title="Google Maps Embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d627.464379527316!2d28.579853931425582!3d-20.161638602473957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb554755bc74b75%3A0xddae429e80e60352!2sMain%20St%20%26%20Thirteenth%20Ave%2C%20Bulawayo!5e0!3m2!1sen!2szw!4v1714988303234!5m2!1sen!2szw"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </Grid>
+    </Grid>
   );
-}
+};
+
+export default CallToAction;

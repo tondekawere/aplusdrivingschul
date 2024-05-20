@@ -6,7 +6,6 @@ import About from "@/components/about";
 import BoxHolder from "@/components/box";
 import { responsiveFontSizes } from '@mui/material/styles';
 
-
 import {
   createTheme,
   ThemeProvider,
@@ -71,10 +70,10 @@ export default function Home() {
       {/* <WhyUs /> */}
       <Team />
       <Testimonials />
-      <div>
+      <div id="Contact">
         <CallToAction></CallToAction>
       </div>
-      <div id="Services">
+      <div>
         <BoxHolder></BoxHolder>
       </div>
       <div>
