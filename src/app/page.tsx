@@ -30,6 +30,7 @@ import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
 import Gallery from "@/components/gallery";
 import WhyUs from "@/components/WhyUs";
+import Team from "@/components/Team";
 
 const theme = createTheme({
   palette: {
@@ -67,6 +68,7 @@ export default function Home() {
         <Gallery />
       </div>
       {/* <WhyUs /> */}
+      <Team />
       <div>
         <CallToAction></CallToAction>
       </div>
