@@ -29,8 +29,9 @@ import Image from "next/image";
 import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
 import Gallery from "@/components/gallery";
-import WhyUs from "@/components/WhyUs";
+// import WhyUs from "@/components/WhyUs";
 import Team from "@/components/Team";
+import Testimonials from "@/components/Testimonials";
 
 const theme = createTheme({
   palette: {
@@ -69,6 +70,7 @@ export default function Home() {
       </div>
       {/* <WhyUs /> */}
       <Team />
+      <Testimonials />
       <div>
         <CallToAction></CallToAction>
       </div>
