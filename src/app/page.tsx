@@ -70,9 +70,9 @@ export default function Home() {
       {/* <WhyUs /> */}
       {/* <Team />
       <Testimonials /> */}
-      {/* <div id="Contact">
+      <div id="Contact">
         <CallToAction></CallToAction>
-      </div> */}
+      </div>
       <div>
         <BoxHolder></BoxHolder>
       </div>
