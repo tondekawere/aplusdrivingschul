@@ -99,7 +99,11 @@ const CustomNavBarLandingPage = () => {
     },
     {
       id: 5,
-      title: "Contact",
+      title: "Gallery",
+    },
+    {
+      id: 6,
+      title: "Contacts",
     },
   ];
   const theme = useTheme();
@@ -190,8 +194,13 @@ const CustomNavBarLandingPage = () => {
               {" "}
               <Grid container display={"flex"} alignItems={"center"}>
                 <Grid item md={4}>
-                  <Box sx={{ border: 0, width: "100%", ml: 5 }}>
-                    <Image width={125} height={62.5} alt="" src="/logo.svg" />
+                  <Box sx={{ border: 0, width: "100%", ml: 12 }}>
+                    <Image
+                      width={100}
+                      height={62.5}
+                      alt=""
+                      src="/Images/logo.png"
+                    />
                   </Box>
                 </Grid>
                 <Grid item md={8}>
@@ -227,28 +236,3 @@ const CustomNavBarLandingPage = () => {
   );
 };
 
-const data = [
-  {
-    title: "Unified Communication Systems",
-    summary: "Voice, video and chat About",
-    description:
-      "We offer end to end communications tools with integrations into your CRM tools",
-    src: "/callcenter2.svg",
-  },
-  {
-    title: "Virtual Private Networks",
-    description: "For your business with multiple locations we can setup and manage your VPN",
-    summary: "Multilocation shared resources",
-
-    src: "/building2.svg",
-  },
-  {
-    title: "Cloud Infrastructure",
-    description: "We support your business with infrastructure as a service and platform as a service About",
-    summary: "Managed services",
-    src: "/server2.svg",
-  },
-
-  
-
-];
