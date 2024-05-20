@@ -1,111 +1,202 @@
-"use client";
-import * as React from "react";
-import { Box, Typography, Button, Grid, Divider } from "@mui/material";
-import Image from "next/image";
+import React from "react";
+import {
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+} from "@mui/material";
+import { Facebook } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
 
-export default function LeftSection({
-  title,
-  subtitle,
-  buttonText,
-  src,
-}: {
-  title: String;
-  subtitle: string;
-  buttonText: string;
-  src: string;
-}) {
+const Team = () => {
+  const theme = useTheme();
   return (
-    <div>
-      <Box sx={{ width: "100%", mb: 2 }}>
-        <Divider>
-          <Typography variant="h4"></Typography>
-        </Divider>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          border: 0,
-          borderColor: "red",
-          pl: 0,
-          pr: 0,
-          p: 0,
-        }}
-      >
-        <Grid container>
-          <Grid container xs={12} sm={8} md={8}>
-            <Grid item>
-              <Typography
-                sx={{
-                  typography: {
-                    xs: "h5",
-                    sm: "h4",
-                    md: "h2",
-                    lg: "h2",
-                    xl: "h1",
-                  },
-                }}
-              >
-                {title}
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                sx={{
-                  typography: {
-                    xs: "subtitle1",
-                    sm: "h6",
-                    md: "h4",
-                    lg: "h4",
-                    xl: "h3",
-                  },
-                }}
-              >
-                {subtitle}
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  size="small"
-                  sx={{ m: 1 }}
-                >
-                  {buttonText}
-                </Button>
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            xs={12}
-            sm={4}
-            md={4}
-            border={0}
-            display={"flex"}
-            justifyContent={"center"}
-          >
-            <Grid item>
-              <Box
-                sx={{
-                  display: {
-                    xs: "none",
-                    sm: "flex",
-                    md: "flex",
-                    lg: "flex",
-                    xl: "flex",
-                  },
-                }}
-              >
-                <Image
-                  src={src}
-                  alt=""
-                  width={200}
-                  height={200}
-                  layout="responsive"
-                />
-              </Box>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Box>
-    </div>
+    <Grid
+      container
+      spacing={3}
+      textAlign={"center"}
+      sx={{ padding: { xs: theme.spacing(4), lg: theme.spacing(10) } }}
+    >
+      <Grid item xs={12}>
+        <Typography variant="h4" fontWeight={800} component="h2" gutterBottom>
+          Our Team
+        </Typography>
+        <Typography paragraph color="textSecondary">
+          Meet the amazing Team at A Plus Driving School
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card
+          sx={{
+            borderRadius: 3,
+            transition: "0.3s",
+            "&:hover": {
+              backgroundColor: "red",
+              color: "white",
+              boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="140"
+            image="./Images/team.png"
+            alt="Team 1"
+          />
+          <CardContent>
+            <Typography variant="h6" fontWeight={700} component="h2">
+              Makhosi Nsimango
+            </Typography>
+            <Typography variant="body2" component="p">
+              Instructor
+            </Typography>
+            <IconButton
+              aria-label="facebook"
+              sx={{
+                position: "absolute",
+                top: 10,
+                left: 10,
+                color: "white",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              <Facebook />
+            </IconButton>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card
+          sx={{
+            borderRadius: 3,
+            transition: "0.3s",
+            "&:hover": {
+              backgroundColor: "red",
+              color: "white",
+              boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="140"
+            image={"/Images/team.png"}
+            alt="Team 2"
+          />
+          <CardContent>
+            <Typography variant="h6" fontWeight={700} component="h2">
+              Makhosi Nsimango
+            </Typography>
+            <Typography variant="body2" component="p">
+              Office Manager
+            </Typography>
+            <IconButton
+              aria-label="facebook"
+              sx={{
+                position: "absolute",
+                top: 10,
+                left: 10,
+                color: "white",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              <Facebook />
+            </IconButton>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card
+          sx={{
+            borderRadius: 3,
+            transition: "0.3s",
+            "&:hover": {
+              backgroundColor: "red",
+              color: "white",
+              boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="140"
+            image="./Images/team.png"
+            alt="Team 3"
+          />
+          <CardContent>
+            <Typography variant="h6" fontWeight={700} component="h2">
+              Makhosi Nsimango
+            </Typography>
+            <Typography variant="body2" component="p">
+              Instructor
+            </Typography>
+            <IconButton
+              aria-label="facebook"
+              sx={{
+                position: "absolute",
+                top: 10,
+                left: 10,
+                color: "white",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              <Facebook />
+            </IconButton>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <Card
+          sx={{
+            borderRadius: 3,
+            transition: "0.3s",
+            "&:hover": {
+              backgroundColor: "red",
+              color: "white",
+              boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+            },
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="140"
+            image="./Images/team.png"
+            alt="Team 4"
+          />
+          <CardContent>
+            <Typography variant="h6" fontWeight={700} component="h2">
+              Makhosi Nsimango
+            </Typography>
+            <Typography variant="body2" component="p">
+              Office Assistant
+            </Typography>
+            <IconButton
+              aria-label="facebook"
+              sx={{
+                position: "absolute",
+                top: 10,
+                left: 10,
+                color: "white",
+                "&:hover": {
+                  color: "white",
+                },
+              }}
+            >
+              <Facebook />
+            </IconButton>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
   );
-}
+};
+
+export default Team;
