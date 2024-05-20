@@ -66,7 +66,7 @@ export default function Home() {
       <div id="Gallery">
         <Gallery />
       </div>
-      <WhyUs />
+      {/* <WhyUs /> */}
       <div>
         <CallToAction></CallToAction>
       </div>
