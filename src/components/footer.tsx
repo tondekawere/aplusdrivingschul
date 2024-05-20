@@ -1,164 +1,245 @@
-'use client'
-import * as React from "react";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import React from "react";
+import { Grid, Typography, Link, Box, IconButton } from "@mui/material";
+import { Phone, Email, LocationOn, AccessTime } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
 
-export default function Footer() {
+const Footer = () => {
+  const theme = useTheme();
   return (
-    <Box
+    <Grid
+      container
+      spacing={5}
+      color={"#fff"}
       sx={{
-        backgroundColor: (theme) =>
-          theme.palette.mode === "light"
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800],
-        p: 6,
+        padding: { xs: theme.spacing(4), lg: theme.spacing(10) },
+        backgroundColor: "#000000b9",
+        display: { xs: "grid", md: "flex" },
+        gap: { xs: "7%", md: "5%" },
+        marginTop: { xs: "10%", lg: "0%" },
+        height: "max-content",
+        paddingBottom: { xs: "80%", sm: "45%" },
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={5}>
-          <Grid item xs={12} sm={4}>
-            <Typography
-              variant="h6"
-              color="text.primary"
-              gutterBottom
-              sx={{ fontWeight: "bold" }}
-            >
-              Products
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Cloud Infrastructure
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Voice Over Internet Protocol
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Virtual Private Network
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Internet of Things
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography
-              variant="h6"
-              color="text.primary"
-              gutterBottom
-              sx={{ fontWeight: "bold" }}
-            >
-              Contact Us
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              123 Main Street, Cape Town, South Africa
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              <Link
-                sx={{
-                  cursor: "pointer",
-                  textDecoration: "none",
-                  "&:hover": {
-                    color: "#fcba03",
-                    textDecoration: "underline",
-                  },
-                }}
-                color="inherit"
-                onClick={() => window.open("mailto:info@digitalnyika.com")}
-              >
-                Email: info@digitalnyika.com
-              </Link>
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              <Link
-                sx={{
-                  cursor: "pointer",
-                  textDecoration: "none",
-                  "&:hover": {
-                    color: "#fcba03",
-                    textDecoration: "underline",
-                  },
-                }}
-                color="inherit"
-                onClick={() => window.open("tel:+27210233698")}
-              >
-                Phone: +27 21 023 3698
-              </Link>
-            </Typography>
-          </Grid>
+      <Grid item xs={12} md={3} lg={3}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Useful information
+        </Typography>
+        <Typography paragraph>
+          We provide a reputable and professional service that aims to give you
+          the confidence to pass your test and drive safely on the roads.
+        </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            height: 200,
+            background: "url(./Images/serv.png)",
+            backgroundPosition: "center center",
+            backgroundSize: "cover",
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Our Activities
+        </Typography>
+        <ul style={{ display: "grid", gap: "10%", paddingLeft: "4%" }}>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Oral Lessonð
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Oral Testð
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Parallel Parkinø
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              3 Point Turé
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Town Drivinø
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Drumð
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Hill Start
+            </Link>
+          </li>
+        </ul>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3} lg={2}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Navigation
+        </Typography>
+        <ul
+          style={{
+            display: "grid",
+            gap: "15%",
+            listStyle: "none",
+            padding: "0",
+          }}
+        >
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link href="#" color="inherit" underline="none">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </Grid>
+      <Grid item xs={12} md={3} lg={3} sx={{ justifyContent: "flex-start" }}>
+        <Typography variant="h5" component="h2" gutterBottom>
+          Get In Touch
+        </Typography>
+        <Grid
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5%",
+            marginBottom: "6%",
+          }}
+        >
+          <IconButton
+            sx={{
+              border: " 1px solid #fff",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "30px",
+              height: "30px",
+            }}
+          >
+            <Phone />
+          </IconButton>
 
-          <Grid item xs={12} sm={4}>
-            <Typography
-              variant="h6"
-              color="text.primary"
-              gutterBottom
-              sx={{ fontWeight: "bold" }}
-            >
-              Follow Us
-            </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
-              <Facebook
-                sx={{
-                  transition: "transform 0.3s ease-in-out",
-                  ":hover": {
-                    transform: "scale(1.1)",
-                    color: "#fcba03",
-                  },
-                }}
-              />
+          <Grid item sx={{ display: "grid", gap: "5%" }}>
+            <Link href="tel:+263772462823" color="inherit" underline="none">
+              +263 77 246 2823
             </Link>
-            <Link
-              href="https://www.instagram.com/"
-              color="inherit"
-              sx={{ pl: 1, pr: 1 }}
-            >
-              <Instagram
-                sx={{
-                  transition: "transform 0.3s ease-in-out",
-                  ":hover": {
-                    transform: "scale(1.1)",
-                    color: "#fcba03",
-                  },
-                }}
-              />
-            </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
-              <Twitter
-                sx={{
-                  transition: "transform 0.3s ease-in-out",
-                  ":hover": {
-                    transform: "scale(1.1)",
-                    color: "#fcba03",
-                  },
-                }}
-              />
+            <Link href="tel:+263712389494" color="inherit" underline="none">
+              +263 71 238 9494
             </Link>
           </Grid>
         </Grid>
-        <Box mt={5}>
-          <Typography variant="body1" color="text.secondary" align="center">
-            {"Copyright © "}
+        <Grid
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5%",
+            marginBottom: "6%",
+          }}
+        >
+          <IconButton
+            sx={{
+              border: " 1px solid #fff",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "30px",
+              height: "30px",
+            }}
+          >
+            <Email />
+          </IconButton>
+
+          <Grid item sx={{ display: "grid", gap: "5%" }}>
             <Link
+              href="mailto:aplusdrivingschl@gmail.com"
               color="inherit"
-              href="https://your-website.com/"
-              sx={{
-                cursor: "pointer",
-                textDecoration: "none",
-                "&:hover": {
-                  color: "#fcba03",
-                  textDecoration: "underline",
-                  
-                },
-              }}
+              underline="none"
             >
-              Digital Nyika
-            </Link>{" "}
-            {new Date().getFullYear()}
-            {"."}
-          </Typography>
-        </Box>
-      </Container>
-    </Box>
+              aplusdrivingschl@gmail.com
+            </Link>
+            <Link
+              href="mailto:aplusdrivingschlinfo@gmail.com"
+              color="inherit"
+              underline="none"
+            >
+              aplusdrivingschlinfo@gmail.com
+            </Link>
+          </Grid>
+        </Grid>
+        <Grid
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5%",
+            marginBottom: "6%",
+          }}
+        >
+          <IconButton
+            sx={{
+              border: " 1px solid #fff",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "30px",
+              height: "30px",
+            }}
+          >
+            <LocationOn />
+          </IconButton>
+
+          <Grid item>
+            <Typography paragraph mb={0}>
+              13 Avenue and JM Nkomo, Moyo Mayson Court, 1st Floor, Office 17,
+              Bulawayo, Zimbabwe
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid sx={{ display: "flex", alignItems: "center", gap: "5%" }}>
+          <IconButton
+            sx={{
+              border: " 1px solid #fff",
+              color: "#fff",
+              borderRadius: "50%",
+              width: "30px",
+              height: "30px",
+            }}
+          >
+            <AccessTime />
+          </IconButton>
+
+          <Grid item>
+            <Typography paragraph mb={0}>
+              Mon-Fri: 6am-6pm
+              <br />
+              Sat-Sun: 10am-5pm
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
   );
-}
+};
+
+export default Footer;
