@@ -1,6 +1,12 @@
-import { Button, Card, CardContent, Grid, TextField, Typography } from '@mui/material';
-import React from 'react';
-
+import {
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
+import React from "react";
 
 export default function Contact() {
   return (
@@ -73,12 +79,12 @@ export default function Contact() {
                 <Button
                   type="submit"
                   variant="contained"
-                  color="primary"
+                  color="error"
                   fullWidth
                   sx={{
                     ":hover": {
                       backgroundColor: "#fff",
-                      color: "primary",
+                      color: "red",
                     },
                   }}
                 >
