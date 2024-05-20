@@ -20,7 +20,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="About"
           />
         </Card>
@@ -38,7 +38,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 1"
           />
         </Card>
@@ -48,7 +48,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 2"
           />
         </Card>
@@ -58,7 +58,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 3"
           />
         </Card>
@@ -68,7 +68,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 4"
           />
         </Card>
@@ -78,7 +78,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 5"
           />
         </Card>
@@ -88,7 +88,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 6"
           />
         </Card>
@@ -98,7 +98,7 @@ const Gallery = () => {
           <CardMedia
             component="img"
             height="240"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Image 6"
           />
         </Card>

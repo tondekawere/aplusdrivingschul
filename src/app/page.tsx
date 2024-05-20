@@ -35,7 +35,7 @@ import RightSection from "@/components/rightSection";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fcba03",
+      main: "#ffffff",
     },
     secondary: {
       main: "#49148c",
@@ -177,7 +177,7 @@ const CustomNavBarLandingPage = () => {
                           cursor: "pointer",
                           textDecoration: "none",
                           "&:hover": {
-                            color: "#fcba03",
+                            color: "#fc0303",
                             textDecoration: "underline",
                           },
                         }}

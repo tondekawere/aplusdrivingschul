@@ -21,7 +21,7 @@ const HeroCenter = () => {
     <Grid
       container
       style={{
-        background: "url(../images/hero.png)",
+        background: "url(../Images/hero.png)",
         backgroundPosition: "center center",
         backgroundSize: "cover",
       }}

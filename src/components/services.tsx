@@ -42,7 +42,7 @@ const Services = () => {
           <CardMedia
             component="img"
             height="140"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Service 1"
           />
           <CardContent>
@@ -84,7 +84,7 @@ const Services = () => {
           <CardMedia
             component="img"
             height="140"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Service 1"
           />
           <CardContent>
@@ -126,7 +126,7 @@ const Services = () => {
           <CardMedia
             component="img"
             height="140"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Service 1"
           />
           <CardContent>
@@ -168,7 +168,7 @@ const Services = () => {
           <CardMedia
             component="img"
             height="140"
-            image="./images/serv.png"
+            image="./Images/serv.png"
             alt="Service 1"
           />
           <CardContent>
