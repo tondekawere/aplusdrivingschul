@@ -30,8 +30,7 @@ import Services from "@/components/services";
 import Gallery from "@/components/gallery";
 import Team from "@/components/leftSection";
 import RightSection from "@/components/rightSection";
-import Book from "@/components/Book";
-// import WhyUs from "@/components/WhyUs";
+import Book from "@/components/showCase";
 
 const theme = createTheme({
   palette: {

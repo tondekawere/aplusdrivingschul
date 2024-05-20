@@ -1,75 +1,61 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
-import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import { Box, IconButton } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import React from "react";
+import { Button, Grid, Typography } from "@mui/material";
+import CustomizedDialogs from "./Dialogs";
 
-interface RecipeReviewCardProps {
-  title: string;
-  summary: string;
-  description: string;
-  src: string;
-}
-
-const CustomCard = styled(Card)(({ theme }) => ({
-  "&:hover": {
-    backgroundColor: theme.palette.primary.main,
-    color: "#fff",
-    boxShadow: theme.shadows[5],
-  },
-}));
-
-export default function RecipeReviewCard({
-  title,
-  summary,
-  description,
-  src,
-}: RecipeReviewCardProps) {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded((prevExpanded) => !prevExpanded);
-  };
-
+const Book = () => {
   return (
-    <CustomCard sx={{ width: 300, mb: 5 }}>
-      <Image
-        src={src}
-        alt=""
-        width={300}
-        height={200}
-        layout="responsive"
-        objectFit="cover"
-      />
-      <CardContent>
-        <Typography variant="button" fontWeight={"bold"} color="text.main">
-          {title}
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {summary}
-        </Typography>
-      </CardContent>
-
-      <CardActions disableSpacing>
-        <IconButton
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+    <Grid
+      container
+      spacing={6}
+      sx={{
+        background: "url(../images/serv.png)",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: { xs: "80vh", sm: "70vh", md: "30vh", lg: "60vh" },
+        marginTop: { xs: "10%", sm: "5%", lg: "0%" },
+      }}
+    >
+      <Grid textAlign={"center"} item xs={12} md={6} lg={7} xl={7}>
+        <Typography
+          variant="h3"
+          color={"white"}
+          fontWeight={800}
+          component="h2"
+          gutterBottom
         >
-          <ExpandMoreIcon sx={{ color: "primary.secondary" }} />
-        </IconButton>
-      </CardActions>
-
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent sx={{ backgroundColor: "lightgrey" }}>
-          <Typography paragraph>{description}</Typography>
-        </CardContent>
-      </Collapse>
-    </CustomCard>
+          Book Your First Driving Lesson And Contact Us
+        </Typography>
+        <Grid
+          item
+          xs={12}
+          lg={8}
+          sx={{
+            margin: "0 auto",
+            gap: "10%",
+          }}
+        >
+          <Button
+            variant="contained"
+            size="large"
+            color="error"
+            sx={{
+              mt: 2,
+              ":hover": {
+                backgroundColor: "#fff",
+                color: "red",
+              },
+            }}
+          >
+            Book Now
+          </Button>
+          <CustomizedDialogs />
+        </Grid>
+      </Grid>
+    </Grid>
   );
-}
+};
+
+export default Book;
