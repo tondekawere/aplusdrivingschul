@@ -29,6 +29,7 @@ import Image from "next/image";
 import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
 import Gallery from "@/components/gallery";
+import WhyUs from "@/components/WhyUs";
 
 const theme = createTheme({
   palette: {
@@ -65,6 +66,7 @@ export default function Home() {
       <div id="Gallery">
         <Gallery />
       </div>
+      <WhyUs />
       <div>
         <CallToAction></CallToAction>
       </div>
