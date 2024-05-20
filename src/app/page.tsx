@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import HeroCenter from "@/components/hero";
 import FeaturesSmallColumn from "@/components/feature";
 import Footer from "@/components/footer";
-import About from "@/components/about";
+import About from "@/components/About";
 import BoxHolder from "@/components/box";
 import LeftSection from "@/components/leftSection";
 import RightSection from "@/components/rightSection";
@@ -58,47 +58,14 @@ export default function Home() {
         </Box>{" "}
       </div>
 
-      <div id="Solutions">
-      <Box sx={{ width: "100%", mb: 2 }}>
-        <Divider>
-          <Typography variant="h4">Solutions</Typography>
-        </Divider>
-      </Box>
-        <Grid
-          container
-          display={"flex"}
-          justifyContent={"space-evenly"}
-          border={0}
-          px={0}
-          
-        >
-          {data.map((item) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={3}
-              border={0}
-              key={item.title}
-              display={"flex"}
-              justifyContent={"center"}
-              
-            >
-              <ShowCase
-                title={item.title}
-                summary={item.summary}
-                description={item.description}
-                src={item.src}
-              />
-            </Grid>
-          ))}
-        </Grid>
+      <div id="About">
+        <About/>
       </div>
 
       <div>
         <Ribbon
-          title="Discover our suite of business solutions"
-          subtitle="By partnering with us you are assured of a tailored digital and clouds solutions.  The technology fades to the background with a focus on your business drivers and user experiences."
+          title="Discover our suite of business About"
+          subtitle="By partnering with us you are assured of a tailored digital and clouds About.  The technology fades to the background with a focus on your business drivers and user experiences."
         />
       </div>
 
@@ -126,7 +93,7 @@ const CustomNavBarLandingPage = () => {
     },
     {
       id: 2,
-      title: "Solutions",
+      title: "About",
     },
 
     {
@@ -266,7 +233,7 @@ const CustomNavBarLandingPage = () => {
 const data = [
   {
     title: "Unified Communication Systems",
-    summary: "Voice, video and chat solutions",
+    summary: "Voice, video and chat About",
     description:
       "We offer end to end communications tools with integrations into your CRM tools",
     src: "/callcenter2.svg",
@@ -280,7 +247,7 @@ const data = [
   },
   {
     title: "Cloud Infrastructure",
-    description: "We support your business with infrastructure as a service and platform as a service solutions",
+    description: "We support your business with infrastructure as a service and platform as a service About",
     summary: "Managed services",
     src: "/server2.svg",
   },
