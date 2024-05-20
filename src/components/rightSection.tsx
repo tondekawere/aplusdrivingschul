@@ -1,108 +1,94 @@
-"use client";
-import * as React from "react";
-import { Box, Typography, Button, Grid, Divider } from "@mui/material";
-import Image from "next/image";
+import React from "react";
+import {
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Box,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
-export default function RightSection({
-  title,
-  subtitle,
-  buttonText,
-  src,
-}: {
-  title: String;
-  subtitle: string;
-  buttonText: string;
-  src: string;
-}) {
+const RightSection = () => {
+  const theme = useTheme();
   return (
-    <div>
-      <Box sx={{ width: "100%", mb: 2 }}>
-        <Divider>
-          <Typography variant="h4"></Typography>
-        </Divider>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          border: 0,
-          borderColor: "red",
-        }}
-      >
-        <Grid container>
-          <Grid
-            container
-            xs={12}
-            sm={4}
-            md={4}
-            border={0}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Grid item>
-              <Box
-                sx={{
-                  display: {
-                    xs: "none",
-                    sm: "flex",
-                    md: "flex",
-                    lg: "flex",
-                    xl: "flex",
-                  },
-                }}
-              >
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-
-                />
-              </Box>
-            </Grid>
-          </Grid>
-          <Grid container xs={12} sm={8} md={8} border={0} p={1}>
-            <Grid item xs={12} sm={12} border={0}>
-              <Typography
-                sx={{
-                  typography: {
-                    xs: "h5",
-                    sm: "h4",
-                    md: "h2",
-                    lg: "h2",
-                    xl: "h1",
-                  },
-                }}
-              >
-                {title}
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={12} border={0} borderColor={"red"}>
-              <Typography
-                sx={{
-                  typography: {
-                    xs: "subtitle1",
-                    sm: "h6",
-                    md: "h4",
-                    lg: "h4",
-                    xl: "h3",
-                  },
-                }}
-              >
-                {subtitle}
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  size="small"
-                  sx={{ m: 1 }}
-                >
-                  {buttonText}
-                </Button>
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Box>
-    </div>
+    <Grid
+      container
+      spacing={3}
+      sx={{
+        padding: {
+          xs: theme.spacing(4),
+          lg: theme.spacing(10),
+          position: "relative",
+          background: "#FEFBFB",
+        },
+      }}
+    >
+      <Grid item textAlign="center" xs={12}>
+        <Typography variant="h4" component="h2" gutterBottom>
+          Why Choose Us?
+        </Typography>
+        <Typography paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </Typography>
+      </Grid>
+      <Grid item xs={12} lg={4} sx={{ margin: "0 auto", marginTop: "10%" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <CardMedia
+            component="img"
+            // height="200"
+            image="./Images/about.png"
+            alt="Why Us"
+          />
+        </Box>
+      </Grid>
+      <Grid item xs={12}>
+        <Box
+          sx={{
+            display: { xs: "none", lg: "flex" },
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          {[
+            { x: 1, y: 5, label: "Safety Driving" },
+            { x: 2, y: 7, label: "Licensed Training" },
+            { x: 1, y: 9, label: "Experienced Instructors" },
+            { x: 2, y: 11, label: "Trattic Rules" },
+            { x: 5, y: 4, label: "Following Rules & Requlations" },
+            { x: 10, y: 5, label: "Standard Vehicles" },
+            { x: 9, y: 7, label: "Comfort Vehicles" },
+            { x: 10, y: 9, label: "Special Classes" },
+            { x: 9, y: 11, label: "Flexible Schedule" },
+          ].map((button, index) => (
+            <Card
+              key={index}
+              sx={{
+                position: "absolute",
+                top: button.y * 60,
+                left: button.x * 120,
+                width: "max-content",
+                maxHeight: "30px",
+                backgroundColor: "white",
+                boxShadow: "0px 0px 10px rgba(0,0,0,0.3)",
+                borderRadius: 2,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <CardContent>
+                <Typography variant="body2" component="p">
+                  {button.label}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </Grid>
+    </Grid>
   );
-}
+};
+
+export default RightSection;

@@ -29,6 +29,7 @@ import CallToAction from "@/components/callToAction";
 import Services from "@/components/services";
 import Gallery from "@/components/gallery";
 import Team from "@/components/leftSection";
+import RightSection from "@/components/rightSection";
 // import WhyUs from "@/components/WhyUs";
 
 const theme = createTheme({
@@ -66,7 +67,7 @@ export default function Home() {
       <div id="Gallery">
         <Gallery />
       </div>
-      {/* <WhyUs /> */}
+      <RightSection />
       <Team />
       <div>
         <BoxHolder></BoxHolder>
