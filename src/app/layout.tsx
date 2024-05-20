@@ -8,10 +8,10 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "digital nyika",
-  description: "digital niyika",
+  title: "A Plus Driving School",
+  description: "www.aplusdrivingschool.co.zw",
   icons:{
-    icon: "favicon.svg"
+    icon: "logo.png"
   }
 };
 
